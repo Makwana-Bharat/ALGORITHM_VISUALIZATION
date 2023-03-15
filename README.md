@@ -41,7 +41,7 @@
 
     ASSETS
 
-    WIREFRAMING
+   UI/UX Design
 <table>
   <tr>
     <td align="center">
