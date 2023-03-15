@@ -41,7 +41,7 @@
 
     ASSETS
 
-   UI/UX Design
+    UI/UX Design
 <table>
   <tr>
     <td align="center">
