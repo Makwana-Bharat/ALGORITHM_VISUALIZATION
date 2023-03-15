@@ -59,7 +59,7 @@
     </td>
     <td align="center">
       <h3>Android View</h3><br/>
-      <img src="https://user-images.githubusercontent.com/126388812/222180676-e919d745-2b8c-4b50-b3ca-fb11757fe827.png"/>
+      <img src="https://user-images.githubusercontent.com/126388812/225302530-942b51b0-04a2-42ea-9a0b-c01159ddf39b.png"/>
     </td>
   </tr>
   <tr>
