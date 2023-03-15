@@ -42,12 +42,12 @@
     ASSETS
 <table>
   <tr>
-    <td colspan="3">SHEDULING</td>
+    <td colspan="3"><h3 align="center"><SHEDULING</h3></td>
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/126388812/225303803-3d127836-4c24-49fb-88c0-994a6455856d.png" /></td>
-    <td><img src="https://user-images.githubusercontent.com/126388812/225303803-3d127836-4c24-49fb-88c0-994a6455856d.png" /></td>
-    <td><img src="https://user-images.githubusercontent.com/126388812/225303803-3d127836-4c24-49fb-88c0-994a6455856d.png" /></td>
+    <td><img src="https://user-images.githubusercontent.com/126388812/225304422-44973d30-50f5-4055-b1e9-55d703f12513.png" /></td>
+    <td><img src="https://user-images.githubusercontent.com/126388812/225304529-ff62e207-5965-4fbb-8e3a-79989b6ef04e.png" /></td>
   </tr>
   
   <tr>
