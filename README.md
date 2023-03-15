@@ -46,7 +46,7 @@
 
 <div align="center">
 <h3 align="center">SPLASH SCREEN</h3>
-<hr/>
+<img src="https://github.com/godkingjay/godkingjay/blob/master/assets/borderseparator.gif"/>
 <img src="https://user-images.githubusercontent.com/126388812/225298505-f56e5b49-2ed9-453d-bdd8-48c074234c47.png"  width="200px"/>
 </div>
 <table>
