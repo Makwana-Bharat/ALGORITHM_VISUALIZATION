@@ -49,8 +49,8 @@ const Home = (props) => {
                     "Content-type": "application/json",
                 },
                 body: JSON.stringify({
-                    UID: User.UID,
-                }),
+                    UID: 41,
+                })
             }
         )
             .then((Response) => Response.json())
@@ -66,9 +66,9 @@ const Home = (props) => {
 
     useEffect(() => {
         const UserExists = async () => {
-            let User = await AsyncStorage.getItem('User');
+            let UserData = await AsyncStorage.getItem('User');
             try {
-                setUser(JSON.parse(User));
+                setUser(JSON.parse(UserData));
             } catch (error) {
                 console.log(error)
             }
@@ -104,7 +104,7 @@ const Home = (props) => {
                         what do you wan't to learn today ?
                     </Text>
                 </View>
-                <SearchBar />
+                <SearchBar props={props} />
                 <View
                     style={{ marginTop: 25, marginBottom: 10, marginHorizontal: ".5%" }}
                 >
@@ -137,7 +137,8 @@ const Home = (props) => {
                     />
                 </View>
                 <View>
-                    <View
+                    <TouchableOpacity
+                        onPress={() => props.navigation.navigate("MostView")}
                         style={{
                             flexDirection: "row",
                             marginTop: 8,
@@ -154,18 +155,17 @@ const Home = (props) => {
                         >
                             Most Viewed
                         </Text>
-                        <TouchableOpacity
+                        <View
                             style={{
                                 justifyContent: "center",
                                 alignItems: "center",
                                 position: "absolute",
                                 right: "2%",
                             }}
-                            onPress={() => props.navigation.navigate("MostView")}
                         >
                             <FontAwesome5 name="angle-right" size={24} color="#552E07" />
-                        </TouchableOpacity>
-                    </View>
+                        </View>
+                    </TouchableOpacity>
                     <View style={{ alignItems: "center", marginTop: 5 }}>
                         <View
                             style={{ borderWidth: 0.6, borderColor: "#552E07", width: "95%" }}
@@ -202,7 +202,8 @@ const Home = (props) => {
                     <></>
                 ) : (
                     <View>
-                        <View
+                        <TouchableOpacity
+                            onPress={() => props.navigation.navigate("RecentView")}
                             style={{
                                 flexDirection: "row",
                                 marginTop: 5,
@@ -219,18 +220,17 @@ const Home = (props) => {
                             >
                                 Recent Viewed
                             </Text>
-                            <TouchableOpacity
+                            <View
                                 style={{
                                     justifyContent: "center",
                                     alignItems: "center",
                                     position: "absolute",
                                     right: "2%",
                                 }}
-                            // onPress={() => props.navigation.navigate("RecentView")}
                             >
                                 <FontAwesome5 name="angle-right" size={24} color="#552E07" />
-                            </TouchableOpacity>
-                        </View>
+                            </View>
+                        </TouchableOpacity>
                         <View style={{ alignItems: "center", marginTop: 5 }}>
                             <View
                                 style={{

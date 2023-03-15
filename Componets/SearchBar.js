@@ -6,11 +6,12 @@ import {
     StyleSheet
 } from "react-native"
 import { FontAwesome5 } from '@expo/vector-icons';
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
         <View style={{ width: '100%', alignItems: 'center' }} >
             <View style={Components.SearchBar}>
                 <TextInput
+                    onFocus={() => props.props.navigation.navigate("Search")}
                     placeholder='Search..'
                     placeholderTextColor={'#552E07'}
                     focusable={false}

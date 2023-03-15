@@ -42,11 +42,3 @@ export default function App() {
   ) : <LoginModal visible={visible} onLogin={(user) => LoginHandler(user)} />;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
