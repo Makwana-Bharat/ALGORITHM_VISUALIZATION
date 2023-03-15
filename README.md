@@ -41,9 +41,11 @@
 
     ASSETS
 
+
     UI/UX Design
-    
+
 <div align="center">
+<h1 align="center">SPLASH SCREEN</h1>
 <img src="https://user-images.githubusercontent.com/126388812/225298505-f56e5b49-2ed9-453d-bdd8-48c074234c47.png"  width="200px"/>
 </div>
 <table>
