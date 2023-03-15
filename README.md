@@ -63,7 +63,7 @@
   <tr>
     <td align="center" colspan="2">
       <h3>Play Screen</h3><br/>
-      <img src="https://user-images.githubusercontent.com/126388812/222182074-57634613-5146-47e5-a6f4-d39ea5648175.png"/>
+      <img src="https://user-images.githubusercontent.com/126388812/225301468-c9648fdc-4390-4eda-bf99-d6e918e27cd4.png"/>
     </td>
   </tr>
 </table>
