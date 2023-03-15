@@ -40,7 +40,8 @@
 </table>
 
     ASSETS
-
+    
+<img src="https://user-images.githubusercontent.com/126388812/225303385-9f8d6eea-9f8b-4a2d-b055-eb0ea71f5026.png"/>
 <br/>
 
     UI/UX Design
