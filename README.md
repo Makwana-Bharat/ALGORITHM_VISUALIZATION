@@ -43,7 +43,9 @@
 
     UI/UX Design
     
-<img src="https://user-images.githubusercontent.com/126388812/225298505-f56e5b49-2ed9-453d-bdd8-48c074234c47.png" />
+<div align="center">
+<img src="https://user-images.githubusercontent.com/126388812/225298505-f56e5b49-2ed9-453d-bdd8-48c074234c47.png"  width="200px"/>
+</div>
 <table>
   <tr>
     <td align="center">
