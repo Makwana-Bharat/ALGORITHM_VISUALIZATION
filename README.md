@@ -45,10 +45,8 @@
 <table>
   <tr>
     <td align="center">
-        <h3>Splash Screen</h3>
-        <br/>
-        ![image](https://user-images.githubusercontent.com/126388812/225298505-f56e5b49-2ed9-453d-bdd8-48c074234c47.png)
-
+        <h3>Splash Screen</h3><br/>
+        <img src="https://user-images.githubusercontent.com/126388812/225298505-f56e5b49-2ed9-453d-bdd8-48c074234c47.png" />
     </td>
     <td align="center">
       <h3>DFS/OS Screen</h3><br/>
