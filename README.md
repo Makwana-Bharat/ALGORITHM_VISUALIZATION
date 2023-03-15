@@ -46,23 +46,25 @@
     UI/UX Design
 
 <div align="center">
-<h3 align="center">SPLASH SCREEN</h3>
+<h3 align="center">============<b>SPLASH SCREEN</b>============</h3>
 <img src="https://user-images.githubusercontent.com/126388812/225298505-f56e5b49-2ed9-453d-bdd8-48c074234c47.png"  width="200px"/>
 </div>
+
+<h3>============Home Screen============</h3><br/>
 <table>
   <tr>
     <td align="center">
-        <h3>Splash Screen</h3><br/>
+        <h3>iOS View</h3><br/>
         <img src="https://user-images.githubusercontent.com/126388812/225299104-aa5a9d03-4a72-491d-8933-baa8ac64d5ec.png" />
     </td>
     <td align="center">
-      <h3>DFS/OS Screen</h3><br/>
+      <h3>Android View</h3><br/>
       <img src="https://user-images.githubusercontent.com/126388812/222180676-e919d745-2b8c-4b50-b3ca-fb11757fe827.png"/>
     </td>
   </tr>
   <tr>
     <td align="center" colspan="2">
-      <h3>Play Screen</h3><br/>
+      <h3>Web View</h3><br/>
       <img src="https://user-images.githubusercontent.com/126388812/225301468-c9648fdc-4390-4eda-bf99-d6e918e27cd4.png"/>
     </td>
   </tr>
