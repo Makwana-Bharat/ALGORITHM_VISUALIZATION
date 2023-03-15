@@ -10,14 +10,14 @@ import {
 
 
 const LoginModal = ({ visible, onLogin }) => {
-    const [username, setUsername] = useState('');
+    const [Email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState({});
 
-    const handleLogin = () => {
+    const handleLogin = async () => {
         const errors = {};
-        if (!username) {
-            errors.username = 'Username is required';
+        if (!Email) {
+            errors.Email = 'Email is required';
         }
         if (!password) {
             errors.password = 'Password is required';
@@ -25,7 +25,25 @@ const LoginModal = ({ visible, onLogin }) => {
         setErrors(errors);
 
         if (Object.keys(errors).length === 0) {
-            onLogin(username);
+            await fetch(
+                "https://algorithmvisualization.000webhostapp.com/Project/API/FetchUser.php",
+                {
+                    method: "post",
+                    headers: {
+                        Accept: "application/json",
+                        "Content-type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        email: Email,
+                        password: password,
+                    }),
+                }
+            )
+                .then((Response) => Response.json())
+                .then((Response) => {
+                    onLogin(Response);
+                })
+                .catch((error) => console.error(error));
         }
     };
 
@@ -36,12 +54,13 @@ const LoginModal = ({ visible, onLogin }) => {
                     <Text style={styles.modalTitle}>Login</Text>
                     <TextInput
                         style={styles.input}
-                        placeholder="Username"
-                        value={username}
-                        onChangeText={setUsername}
+                        inputMode={'email'}
+                        placeholder="Email"
+                        value={Email}
+                        onChangeText={setEmail}
                     />
-                    {errors.username && (
-                        <Text style={styles.errorText}>{errors.username}</Text>
+                    {errors.Email && (
+                        <Text style={styles.errorText}>{errors.Email}</Text>
                     )}
                     <TextInput
                         style={styles.input}

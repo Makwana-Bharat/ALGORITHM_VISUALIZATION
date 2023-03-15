@@ -13,9 +13,12 @@ const Home = (props) => {
 
     /* ================ Hooks ================*/
 
-    const [UserName, setUserName] = useState('');
     const [Type, setType] = useState();
+    const [Data, setData] = useState();
     const [Mview, setMview] = useState();
+    const [User, setUser] = useState('');
+    const [Rview, setRview] = useState([]);
+    const [loading, setloading] = useState(true);
 
     /**=== GET DATA === */
     const GetData = async () => {
@@ -28,17 +31,47 @@ const Home = (props) => {
             .then((Response) => setType(Response))
             .catch((error) => console.error(error));
 
-        /** === MOST MOVIED  */
+        /** === MOST VIEWED  */
         await fetch(
             "https://algorithmvisualization.000webhostapp.com/Project/API/MostView.php"
         )
             .then((Response) => Response.json())
             .then((Response) => setMview(Response));
+
+
+        /** === RECENT VIEWED  */
+        await fetch(
+            "https://algorithmvisualization.000webhostapp.com/Project/API/RecentView.php",
+            {
+                method: "post",
+                headers: {
+                    Accept: "application/json",
+                    "Content-type": "application/json",
+                },
+                body: JSON.stringify({
+                    UID: User.UID,
+                }),
+            }
+        )
+            .then((Response) => Response.json())
+            .then((Response) => setRview(Response))
+            .catch((error) => console.error(error));
+        await fetch(
+            "https://algorithmvisualization.000webhostapp.com/Project/API/DFS.php"
+        )
+            .then((Response) => Response.json())
+            .then((Response) => setData(Response), setloading(false))
+            .catch((error) => console.error(error));
     }
 
     useEffect(() => {
         const UserExists = async () => {
-            setUserName(await AsyncStorage.getItem('User'));
+            let User = await AsyncStorage.getItem('User');
+            try {
+                setUser(JSON.parse(User));
+            } catch (error) {
+                console.log(error)
+            }
         }
         UserExists();
         GetData();
@@ -64,7 +97,7 @@ const Home = (props) => {
                             Hi,
                         </Text>
                         <Text style={{ fontSize: 28, fontWeight: "700", color: "#341100" }}>
-                            {UserName}
+                            {User.USERNAME}
                         </Text>
                     </View>
                     <Text style={{ color: "#552E07", fontWeight: "500", marginTop: 5 }}>
@@ -164,7 +197,7 @@ const Home = (props) => {
                         keyExtractor={(item) => item.ID}
                     />
                 </View>
-                {/*......Recent Viewed Algorithms......*//*}
+                {/*......Recent Viewed Algorithms......*/}
                 {Rview.ID == "0" ? (
                     <></>
                 ) : (
@@ -193,7 +226,7 @@ const Home = (props) => {
                                     position: "absolute",
                                     right: "2%",
                                 }}
-                                onPress={() => props.navigation.navigate("RecentView")}
+                            // onPress={() => props.navigation.navigate("RecentView")}
                             >
                                 <FontAwesome5 name="angle-right" size={24} color="#552E07" />
                             </TouchableOpacity>
@@ -218,7 +251,7 @@ const Home = (props) => {
                                     }
                                 >
                                     <ProgressiveImage
-                                        defaultImageSrc={require("../assets/Images/defaultImage.png")}
+                                        defaultImageSrc={{ uri: "https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/0d8f5954284fa1865ff2a6d52454330a" }}
                                         actualImageSrc={{ uri: item.IMAGE }}
                                         style={{
                                             height: Height / 6,
@@ -235,7 +268,7 @@ const Home = (props) => {
                     </View>
                 )}
 
-                {/*......DS Algorithms......*//*}
+                {/*......DS Algorithms......*/}
 
                 <View>
                     <View
@@ -283,7 +316,7 @@ const Home = (props) => {
                                 }
                             >
                                 <ProgressiveImage
-                                    defaultImageSrc={require("../assets/Images/defaultImage.png")}
+                                    defaultImageSrc={{ uri: "https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/0d8f5954284fa1865ff2a6d52454330a" }}
                                     actualImageSrc={{ uri: item.IMAGE }}
                                     style={{
                                         height: Height / 6,
@@ -297,7 +330,7 @@ const Home = (props) => {
                         )}
                         keyExtractor={(item) => item.ID}
                     />
-                </View> */}
+                </View>
             </ScrollView>
         </View>
     );

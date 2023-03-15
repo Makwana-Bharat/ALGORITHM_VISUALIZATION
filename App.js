@@ -25,9 +25,14 @@ export default function App() {
   /*=================LOGIN HANDLER===========================*/
   const LoginHandler = (user) => {
     setVisible(false);
-    setUsername(user);
-    AsyncStorage.setItem('User', user);
-    NavBar
+    setUsername(user.USERNAME);
+    AsyncStorage.setItem('User', JSON.stringify(user));
+    return (
+      <NavigationContainer>
+        <NavBar />
+        <StatusBar style="auto" />
+      </NavigationContainer>
+    );
   }
   return userExists ? (
     <NavigationContainer>
