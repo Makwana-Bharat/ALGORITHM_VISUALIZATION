@@ -33,7 +33,7 @@
         <img src="https://user-images.githubusercontent.com/126388812/222181893-1ce5c959-d7c2-4393-9172-a7a4480dc7b6.png"/>
     </td>
     <td align="center">
-      <h3>Play Ground Screen</h3><br/>
+      <h3>Play Screen</h3><br/>
       <img src="https://user-images.githubusercontent.com/126388812/222182074-57634613-5146-47e5-a6f4-d39ea5648175.png"/>
     </td>
   </tr>
