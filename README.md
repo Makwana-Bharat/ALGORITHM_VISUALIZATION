@@ -19,7 +19,7 @@
 <table>
   <tr>
     <td align="center">
-        <h3>Splash Screen</h3>
+        <h3>Home Screen</h3>
         <br/>
         <img src="https://user-images.githubusercontent.com/126388812/222180570-aa1ee2f9-e4ac-49c1-84c4-136a4c42e079.png"/>
     </td>
@@ -45,9 +45,10 @@
 <table>
   <tr>
     <td align="center">
-        <h3>Home Screen</h3>
+        <h3>Splash Screen</h3>
         <br/>
-        <img src="https://user-images.githubusercontent.com/126388812/222180570-aa1ee2f9-e4ac-49c1-84c4-136a4c42e079.png"/>
+        
+        <img src="https://user-images.githubusercontent.com/126388812/225298188-4c8ad327-52e3-4e09-9f1e-a61b78a50a6a.png"/>
     </td>
     <td align="center">
       <h3>DFS/OS Screen</h3><br/>
