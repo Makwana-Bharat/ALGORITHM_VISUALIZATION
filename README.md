@@ -6,6 +6,8 @@
 </div>
 <img src="https://github.com/godkingjay/godkingjay/blob/master/assets/borderseparator.gif"/>
 
+![Rectangle 12](https://github.com/Makwana-Bharat/ALGORITHM_VISUALIZATION/assets/126388812/3c80751b-1252-417b-bf8a-ef7d44b71019)
+
   ->  This is Cross-Platform application so that user can use this app by different devices which available .</br>
   ->  Also, this is Online application so that multiple users can access this app at a time from different location...</br> 
   ->  The aim of this application is to reduce the manual effort of developer and Programming student .</br>
